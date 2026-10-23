@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GK Vogue — Branded clothes. Better prices.</title>
+<meta name="description" content="GK Vogue is your new destination for branded men's clothing without the premium price tag. Men's fashion, sports wear, formals & casuals. Coming soon.">
+<meta name="theme-color" content="#15120F">
+<meta property="og:title" content="GK Vogue — Branded clothes. Better prices.">
+<meta property="og:description" content="Your style. Your budget. A new way to wear brands.">
+<meta property="og:image" content="img/rooftop-city-sky.webp">
+<link rel="icon" href="img/gk-mark.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/rooftop-city-sky-sm.webp" media="(max-width: 700px)">
+<link rel="preload" as="image" href="img/rooftop-city-sky.webp" media="(min-width: 701px)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15120F; --ink2:#1E1A16; --paper:#F3EEE6; --paper2:#E9E2D6;
+  --cream:#EFE8DC; --sand:#C9B59A; --soft:#A79C8E; --soft-dark:#6F665C;
+  --orange:#F26A10; --orange2:#FF8A2B;
+  --serif:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --slow:1.6s var(--ease);
+  --pad:clamp(20px,6vw,72px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--cream);font:300 1.0625rem/1.75 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:.005em}
+.eyebrow{font:400 .72rem/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--sand)}
+.eyebrow::before{content:"";display:inline-block;width:22px;height:1px;background:var(--orange);margin-right:.9em;vertical-align:middle}
+:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+
+/* grain overlay */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;
+  padding:calc(14px + env(safe-area-inset-top)) var(--pad) 14px;transition:background 1s,backdrop-filter 1s}
+.nav.solid{background:color-mix(in srgb,var(--ink) 72%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.nav .logo{display:flex;align-items:center;gap:.6rem;font:500 .8rem var(--sans);letter-spacing:.3em}
+.nav .logo img{width:30px;height:auto}
+.nav a.ig{font:400 .75rem var(--sans);letter-spacing:.2em;text-transform:uppercase;border:1px solid color-mix(in srgb,var(--cream) 35%,transparent);border-radius:999px;padding:.55rem 1rem;transition:border-color .6s,background .6s}
+.nav a.ig:hover{border-color:var(--orange);background:color-mix(in srgb,var(--orange) 14%,transparent)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--pad) clamp(3rem,10vh,6rem);overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:-8% 0;z-index:-2;will-change:transform}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:38% 42%;transform:scale(1.08);animation:breathe 22s var(--ease) infinite alternate}
+@keyframes breathe{to{transform:scale(1) translateY(-1.5%)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(21,18,15,.35) 0%,rgba(21,18,15,.05) 30%,rgba(21,18,15,.55) 65%,var(--ink) 100%)}
+.hero .glow{position:absolute;z-index:-1;right:-30vw;top:10vh;width:90vw;height:90vw;max-width:720px;max-height:720px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,color-mix(in srgb,var(--orange2) 32%,transparent),transparent 62%);filter:blur(20px);animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(-4vw,0)}to{transform:translate(6vw,-6vh)}}
+.hero .mark{width:clamp(84px,20vw,140px);margin-bottom:clamp(1.6rem,5vh,3rem);filter:drop-shadow(0 12px 30px rgba(0,0,0,.45))}
+.hero h1{font-size:clamp(2.6rem,10.5vw,6.4rem);line-height:1.02;max-width:9.5em;color:#fff;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--orange2)}
+.hero p{margin-top:1.4rem;max-width:30em;color:color-mix(in srgb,var(--cream) 84%,transparent);font-size:clamp(1rem,2.8vw,1.2rem)}
+.hero .cta{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:.9rem 1.2rem;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:.7rem;font:500 .85rem var(--sans);letter-spacing:.14em;text-transform:uppercase;
+  background:var(--orange);color:#fff;padding:1rem 1.5rem;border-radius:999px;border:1px solid var(--orange);transition:transform .8s var(--ease),background .8s,box-shadow .8s;box-shadow:0 10px 30px -10px color-mix(in srgb,var(--orange) 70%,transparent)}
+.btn:hover{transform:translateY(-2px);background:var(--orange2);box-shadow:0 16px 40px -10px color-mix(in srgb,var(--orange) 80%,transparent)}
+.btn svg{width:18px;height:18px}
+.btn.ghost{background:transparent;color:var(--cream);border-color:color-mix(in srgb,var(--cream) 35%,transparent);box-shadow:none}
+.btn.ghost:hover{border-color:var(--cream);background:color-mix(in srgb,#fff 8%,transparent)}
+.hero .scroll{position:absolute;right:var(--pad);bottom:clamp(3rem,10vh,6rem);writing-mode:vertical-rl;font:400 .65rem var(--sans);letter-spacing:.35em;text-transform:uppercase;color:var(--sand);display:none}
+.hero .scroll::after{content:"";display:block;width:1px;height:48px;background:linear-gradient(var(--sand),transparent);margin:.8rem auto 0;animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+.hero>*{opacity:0;transform:translateY(16px);animation:arrive 2s var(--ease) forwards}
+.hero .bg,.hero .glow{opacity:1;transform:none;animation-name:breathe}
+.hero .glow{animation-name:drift}
+.hero .mark{animation-delay:.3s}.hero h1{animation-delay:.8s}.hero p{animation-delay:1.3s}.hero .cta{animation-delay:1.7s}.hero .scroll{animation-delay:2.4s}
+@keyframes arrive{to{opacity:1;transform:none}}
+
+/* marquee */
+.ticker{overflow:hidden;border-top:1px solid color-mix(in srgb,var(--cream) 10%,transparent);border-bottom:1px solid color-mix(in srgb,var(--cream) 10%,transparent);padding:1rem 0;background:var(--ink)}
+.ticker div{display:flex;gap:3rem;width:max-content;animation:slide 38s linear infinite;font:400 .78rem var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--sand);white-space:nowrap}
+.ticker span::after{content:"✦";color:var(--orange);margin-left:3rem;font-size:.6rem;vertical-align:middle}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* generic section */
+section{padding:clamp(5rem,14vh,9rem) var(--pad)}
+.r{opacity:0;transform:translateY(22px);transition:opacity var(--slow),transform var(--slow)}
+.r.in{opacity:1;transform:none}
+.r.d1{transition-delay:.15s}.r.d2{transition-delay:.3s}.r.d3{transition-delay:.45s}.r.d4{transition-delay:.6s}
+
+/* belief */
+.belief{position:relative;overflow:hidden}
+.belief .shadow{position:absolute;inset:0;z-index:0;opacity:.35}
+.belief .shadow img{width:100%;height:100%;object-fit:cover;object-position:center}
+.belief::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--ink),transparent 25%,transparent 75%,var(--ink));z-index:1}
+.belief .wrap{position:relative;z-index:2;max-width:46rem}
+.belief h2{font-size:clamp(2rem,7vw,4rem);line-height:1.12;margin-top:1.4rem;text-wrap:balance}
+.belief h2 em{font-style:italic;color:var(--orange2)}
+.belief p{margin-top:1.6rem;color:color-mix(in srgb,var(--cream) 78%,transparent);max-width:34em}
+.belief .sig{margin-top:2.4rem;font:italic 400 1.5rem var(--serif);color:var(--sand)}
+
+/* categories */
+.cats{background:var(--paper);color:var(--ink);padding-top:clamp(4rem,12vh,8rem)}
+.cats header{max-width:40rem}
+.cats h2{font-size:clamp(2rem,6.5vw,3.6rem);line-height:1.1;margin-top:1.2rem}
+.cats .eyebrow{color:var(--soft-dark)}
+.grid{display:grid;gap:1rem;margin-top:3rem;grid-template-columns:1fr}
+.card{position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:var(--ink);color:#fff;isolation:isolate}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 2.4s var(--ease);z-index:-1}
+.card:hover img{transform:scale(1.06)}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 40%,rgba(21,18,15,.85))}
+.card .txt{position:absolute;left:1.4rem;right:1.4rem;bottom:1.4rem}
+.card .n{font:400 .7rem var(--sans);letter-spacing:.3em;color:var(--orange2)}
+.card h3{font-size:clamp(1.7rem,5.5vw,2.4rem);line-height:1.05;margin-top:.5rem}
+.card p{margin-top:.5rem;font-size:.95rem;color:color-mix(in srgb,#fff 78%,transparent);max-width:22em}
+
+/* why */
+.why{background:var(--paper2);color:var(--ink)}
+.why .eyebrow{color:var(--soft-dark)}
+.why h2{font-size:clamp(2rem,6.5vw,3.6rem);line-height:1.1;margin-top:1.2rem;max-width:14em}
+.why ol{list-style:none;padding:0;margin-top:3rem;display:grid;gap:0;border-top:1px solid color-mix(in srgb,var(--ink) 15%,transparent)}
+.why li{display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.6rem 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 15%,transparent)}
+.why li b{font:400 1.1rem var(--serif);color:var(--orange);letter-spacing:.05em}
+.why li h3{font-size:1.45rem;line-height:1.2}
+.why li p{margin-top:.4rem;color:var(--soft-dark);max-width:32em}
+
+/* lookbook */
+.look{padding-left:0;padding-right:0}
+.look header{padding:0 var(--pad);max-width:40rem}
+.look h2{font-size:clamp(2rem,6.5vw,3.6rem);line-height:1.1;margin-top:1.2rem}
+.strip{margin-top:3rem;display:flex;gap:.8rem;overflow-x:auto;padding:0 var(--pad) 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab}
+.strip.drag{cursor:grabbing;scroll-behavior:auto}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 min(78vw,340px);border-radius:4px;overflow:hidden;aspect-ratio:4/5;background:var(--ink2)}
+.strip figure:nth-child(even){margin-top:2.5rem}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform 3s var(--ease)}
+.strip figure:hover img{transform:scale(1.05)}
+.look .hint{padding:0 var(--pad);margin-top:.6rem;font:400 .7rem var(--sans);letter-spacing:.25em;text-transform:uppercase;color:var(--soft)}
+
+/* coming soon */
+.soon{position:relative;overflow:hidden;text-align:center;padding-top:clamp(6rem,18vh,11rem);padding-bottom:clamp(6rem,18vh,11rem)}
+.soon .bg{position:absolute;inset:0;z-index:0}
+.soon .bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.5}
+.soon::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,rgba(21,18,15,.2),rgba(21,18,15,.9) 75%)}
+.soon .wrap{position:relative;z-index:2;max-width:40rem;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.soon .eyebrow::before{display:none}
+.soon h2{font-size:clamp(2.6rem,10vw,5.6rem);line-height:1;margin-top:1.2rem;color:#fff}
+.soon h2 em{font-style:italic;color:var(--orange2)}
+.soon p{margin-top:1.4rem;color:color-mix(in srgb,var(--cream) 80%,transparent);max-width:30em}
+.soon .cta{margin-top:2.4rem}
+.soon .handle{margin-top:1rem;font:400 .8rem var(--sans);letter-spacing:.2em;color:var(--sand)}
+
+/* location */
+.loc{background:var(--paper);color:var(--ink)}
+.loc .eyebrow{color:var(--soft-dark)}
+.loc h2{font-size:clamp(2rem,6.5vw,3.6rem);line-height:1.1;margin-top:1.2rem}
+.loc .cols{display:grid;gap:2.4rem;margin-top:2.6rem;grid-template-columns:1fr}
+.loc dl{display:grid;grid-template-columns:auto 1fr;gap:.6rem 1.4rem;align-items:baseline}
+.loc dt{font:400 .68rem var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--soft-dark);padding-top:.3em}
+.loc dd{font-size:1.05rem}
+.loc dd small{display:block;color:var(--soft-dark);font-size:.9rem}
+.loc .map{aspect-ratio:4/3;border-radius:4px;background:var(--paper2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.6rem;color:var(--soft-dark);border:1px dashed color-mix(in srgb,var(--ink) 25%,transparent);text-align:center;padding:1.5rem}
+.loc .map a{color:var(--orange);font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
+.loc .lockup{margin-top:3rem;max-width:280px;mix-blend-mode:multiply;opacity:.9}
+
+/* footer */
+footer{padding:3rem var(--pad) calc(2.5rem + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:1.2rem 2.5rem;align-items:center;justify-content:space-between;font-size:.85rem;color:var(--soft);border-top:1px solid color-mix(in srgb,var(--cream) 10%,transparent)}
+footer .brand{display:flex;align-items:center;gap:.7rem;color:var(--cream);letter-spacing:.3em;font-size:.8rem;font-weight:500}
+footer .brand img{width:26px}
+footer nav{display:flex;gap:1.6rem}
+footer nav a{letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;transition:color .5s}
+footer nav a:hover{color:var(--orange2)}
+
+/* tablet */
+@media (min-width:700px){
+  .hero .scroll{display:block}
+  .grid{grid-template-columns:1fr 1fr;gap:1.2rem}
+  .card{aspect-ratio:4/5}
+  .card:nth-child(3){grid-column:1/-1;aspect-ratio:16/8}
+  .card .txt{left:1.8rem;right:1.8rem;bottom:1.8rem}
+  .card h3{font-size:clamp(1.7rem,3.4vw,2.4rem)}
+  .why ol{grid-template-columns:1fr 1fr;border-top:0;gap:0 3rem}
+  .why li{border-top:1px solid color-mix(in srgb,var(--ink) 15%,transparent)}
+  .why li:nth-child(-n+2){border-top:1px solid color-mix(in srgb,var(--ink) 15%,transparent)}
+  .loc .cols{grid-template-columns:1.1fr 1fr;align-items:start}
+  .belief .wrap{margin-left:clamp(0px,8vw,8rem)}
+}
+/* desktop */
+@media (min-width:1100px){
+  .hero{padding-bottom:7rem}
+  .hero h1{max-width:10em}
+  .strip figure{flex-basis:380px}
+  .grid{grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  .card,.card:nth-child(3){grid-column:auto;aspect-ratio:3/4}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01s!important}
+  .hero>*,.r{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="GK Vogue home"><img src="img/gk-mark.svg" alt="" width="30" height="27"><span>GK VOGUE</span></a>
+  <a class="ig" href="https://instagram.com/gkvogue" target="_blank" rel="noopener">Instagram</a>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h1">
+  <div class="bg" id="heroBg">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/rooftop-city-sky-sm.webp">
+      <img src="img/rooftop-city-sky.webp" alt="A young man sitting on a rooftop ledge at golden hour, looking out over the city" width="1400" height="1598" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="glow" aria-hidden="true"></div>
+  <img class="mark" src="img/gk-mark.svg" alt="GK Vogue" width="140" height="125">
+  <h1 id="h1">Branded clothes. <em>Better prices.</em></h1>
+  <p>Your new destination for branded men's clothing without the premium price tag. Because looking good and spending smart should always go together.</p>
+  <div class="cta">
+    <a class="btn" href="https://instagram.com/gkvogue" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Follow on Instagram
+    </a>
+    <a class="btn ghost" href="#story">Our story</a>
+  </div>
+  <div class="scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div>
+    <span>Men's Fashion</span><span>Sports Wear</span><span>Formals &amp; Casuals</span><span>Your Style, Your Budget</span><span>More Style, Less Spend</span>
+    <span>Men's Fashion</span><span>Sports Wear</span><span>Formals &amp; Casuals</span><span>Your Style, Your Budget</span><span>More Style, Less Spend</span>
+  </div>
+</div>
+
+<section class="belief" id="story">
+  <div class="shadow" aria-hidden="true"><img src="img/concrete-shadow-sm.webp" srcset="img/concrete-shadow-sm.webp 800w, img/concrete-shadow.webp 1400w" sizes="100vw" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="eyebrow r">Our belief</div>
+    <h2 class="r d1">Style shouldn't <em>be expensive.</em></h2>
+    <p class="r d2">At GK Vogue, we believe good fashion should be within everyone's reach. So we built a store around one simple idea: a curated selection of branded clothing, thoughtfully priced to make great style more accessible.</p>
+    <p class="r d3">No gimmicks, no fine print. Just labels you already love, at prices that make sense for you.</p>
+    <div class="sig r d4">Fashion for everyone.</div>
+  </div>
+</section>
+
+<section class="cats" id="wear">
+  <header>
+    <div class="eyebrow r">What we carry</div>
+    <h2 class="r d1">Three rails. Every kind of day.</h2>
+  </header>
+  <div class="grid">
+    <article class="card r">
+      <img src="img/rack-sm.webp" srcset="img/rack-sm.webp 800w, img/rack.webp 1400w" sizes="(min-width:1100px) 33vw, (min-width:700px) 50vw, 100vw" alt="A rail of shirts and jackets in warm light" loading="lazy" width="800" height="913">
+      <div class="txt"><div class="n">01</div><h3>Men's Fashion</h3><p>Everyday pieces from brands you know, picked for fit and finish.</p></div>
+    </article>
+    <article class="card r d1">
+      <img src="img/gk-tee-sm.webp" srcset="img/gk-tee-sm.webp 800w, img/gk-tee.webp 1400w" sizes="(min-width:1100px) 33vw, (min-width:700px) 50vw, 100vw" alt="Close-up of a black tee with a small GK monogram" loading="lazy" width="800" height="913">
+      <div class="txt"><div class="n">02</div><h3>Sports Wear</h3><p>Built to move. Tees, tracks and layers for training and the rest of your day.</p></div>
+    </article>
+    <article class="card r d2">
+      <img src="img/folded-knits-sm.webp" srcset="img/folded-knits-sm.webp 800w, img/folded-knits.webp 1400w" sizes="(min-width:1100px) 33vw, 100vw" style="object-position:center 70%" alt="Neatly folded knits and denim arranged on stone blocks" loading="lazy" width="800" height="913">
+      <div class="txt"><div class="n">03</div><h3>Formals &amp; Casuals</h3><p>From the Monday meeting to the Sunday coffee, without changing stores.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="eyebrow r">Why GK Vogue</div>
+  <h2 class="r d1">A different kind of label.</h2>
+  <ol>
+    <li class="r"><b>01</b><div><h3>Real brands, really</h3><p>Every piece on our rail is genuine branded clothing. We don't do look-alikes.</p></div></li>
+    <li class="r d1"><b>02</b><div><h3>Better prices, always</h3><p>Not a sale, not a season. Fair pricing is how we work every single day.</p></div></li>
+    <li class="r d2"><b>03</b><div><h3>Picked by hand</h3><p>A smaller, sharper selection, so you spend less time hunting and more time wearing.</p></div></li>
+    <li class="r d3"><b>04</b><div><h3>Made for you</h3><p>Friendly help, honest fit advice, and no pressure. Come in, take your time.</p></div></li>
+  </ol>
+</section>
+
+<section class="look" id="look">
+  <header>
+    <div class="eyebrow r">Lookbook</div>
+    <h2 class="r d1">Your next favourite fit.</h2>
+  </header>
+  <div class="strip r">
+    <figure><img src="img/rooftop-sea-sm.webp" alt="A man sitting on a rooftop at sunset with the coastline behind him" loading="lazy" width="800" height="913"></figure>
+    <figure><img src="img/gk-tee-sm.webp" alt="Black tee with a GK monogram" loading="lazy" width="800" height="913"></figure>
+    <figure><img src="img/rooftop-city-sm.webp" alt="A man on a rooftop overlooking the city skyline" loading="lazy" width="800" height="913"></figure>
+    <figure><img src="img/folded-knits-sm.webp" alt="Folded knits and denim on stone" loading="lazy" width="800" height="913"></figure>
+    <figure><img src="img/rack-sm.webp" alt="A clothing rail in warm window light" loading="lazy" width="800" height="913"></figure>
+    <figure><img src="img/rooftop-city-sky-sm.webp" alt="A man sitting on a rooftop at golden hour" loading="lazy" width="800" height="913"></figure>
+  </div>
+  <div class="hint">Swipe or drag →</div>
+</section>
+
+<section class="soon" id="soon">
+  <div class="bg" aria-hidden="true"><img src="img/rooftop-sea-sm.webp" srcset="img/rooftop-sea-sm.webp 800w, img/rooftop-sea.webp 825w" sizes="100vw" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="eyebrow r">Introducing</div>
+    <h2 class="r d1">Coming <em>soon.</em></h2>
+    <p class="r d2">We're putting the final touches on the store. Follow along on Instagram and be the first to know when the doors open.</p>
+    <div class="cta r d3">
+      <a class="btn" href="https://instagram.com/gkvogue" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Follow @gkvogue
+      </a>
+    </div>
+    <div class="handle r d4">A new way to wear brands.</div>
+  </div>
+</section>
+
+<section class="loc" id="visit">
+  <div class="eyebrow r">Visit us</div>
+  <h2 class="r d1">Come see the rail in person.</h2>
+  <div class="cols">
+    <dl class="r d2">
+      <dt>Address</dt><dd>Store address line 1<small>Area, City – PIN</small></dd>
+      <dt>Hours</dt><dd>Mon – Sat, 10:30 am – 9:00 pm<small>Sunday, 11:00 am – 8:00 pm</small></dd>
+      <dt>Phone</dt><dd><a href="tel:+910000000000">+91 00000 00000</a></dd>
+      <dt>Instagram</dt><dd><a href="https://instagram.com/gkvogue" target="_blank" rel="noopener">@gkvogue</a></dd>
+    </dl>
+    <div class="map r d3">
+      <span>Map coming soon</span>
+      <a href="https://maps.google.com/?q=GK+Vogue" target="_blank" rel="noopener">Open in Google Maps →</a>
+    </div>
+  </div>
+  <img class="lockup r d4" src="img/logo-lockup.webp" alt="GK Vogue — Men's Fashion, Sports Wear, Formals & Casuals" loading="lazy" width="280" height="324">
+</section>
+
+</main>
+
+<footer>
+  <div class="brand"><img src="img/gk-mark.svg" alt="" width="26" height="23">GK VOGUE</div>
+  <nav aria-label="Footer">
+    <a href="#story">Story</a><a href="#wear">Wear</a><a href="#look">Lookbook</a><a href="#visit">Visit</a>
+  </nav>
+  <div>© <span id="yr"></span> GK Vogue. Your style, your budget.</div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.r').forEach(function(el){io.observe(el)});
+  var nav=document.getElementById('nav'),bg=document.getElementById('heroBg'),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches,ticking=false;
+  function onScroll(){
+    var y=scrollY;
+    nav.classList.toggle('solid',y>40);
+    if(!reduce&&y<innerHeight*1.2){bg.style.transform='translateY('+(y*.28)+'px)'}
+    ticking=false;
+  }
+  addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(onScroll);ticking=true}},{passive:true});
+  onScroll();
+
+  /* infinite lookbook loop */
+  var strip=document.querySelector('.strip');
+  if(strip){
+    var items=Array.prototype.slice.call(strip.children);
+    items.forEach(function(f){var c=f.cloneNode(true);c.setAttribute('aria-hidden','true');strip.appendChild(c)});
+    var half=0,paused=false,resumeT,dragging=false,sx=0,sl=0;
+    function measure(){half=strip.scrollWidth/2}
+    function wrap(){if(strip.scrollLeft>=half)strip.scrollLeft-=half;else if(strip.scrollLeft<=0)strip.scrollLeft+=half}
+    function tick(){if(!paused&&!dragging&&!reduce){strip.scrollLeft+=0.6;wrap()}requestAnimationFrame(tick)}
+    function pause(){paused=true;clearTimeout(resumeT);resumeT=setTimeout(function(){paused=false},2500)}
+    strip.addEventListener('scroll',function(){wrap()},{passive:true});
+    strip.addEventListener('touchstart',pause,{passive:true});strip.addEventListener('touchmove',pause,{passive:true});
+    strip.addEventListener('wheel',pause,{passive:true});
+    strip.addEventListener('mouseenter',function(){paused=true});strip.addEventListener('mouseleave',function(){paused=false;dragging=false;strip.classList.remove('drag')});
+    strip.addEventListener('mousedown',function(e){dragging=true;sx=e.pageX;sl=strip.scrollLeft;strip.classList.add('drag');e.preventDefault()});
+    addEventListener('mouseup',function(){dragging=false;strip.classList.remove('drag')});
+    strip.addEventListener('mousemove',function(e){if(dragging){strip.scrollLeft=sl-(e.pageX-sx);wrap()}});
+    addEventListener('resize',measure);
+    measure();strip.querySelectorAll('img').forEach(function(i){i.addEventListener('load',measure)});strip.scrollLeft=1;requestAnimationFrame(tick);
+  }
+})();
+</script>
+</body>
+</html>

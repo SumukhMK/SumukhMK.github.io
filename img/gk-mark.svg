@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 200" role="img" aria-label="GK Vogue mark">
+  <defs>
+    <linearGradient id="k" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8A2B"/>
+      <stop offset="1" stop-color="#E85A05"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E4DFD7"/>
+    </linearGradient>
+  </defs>
+  <!-- G ring: open on the upper right -->
+  <path d="M138.1 114.5 A56 56 0 1 1 126.9 64" fill="none" stroke="url(#g)" stroke-width="30" stroke-linecap="butt"/>
+  <!-- G bar -->
+  <polygon fill="url(#g)" points="62,115 90,85 153,85 153,115"/>
+  <!-- K arms -->
+  <polygon fill="url(#k)" points="122,78 170,28 202,28 146,86"/>
+  <polygon fill="url(#k)" points="130,88 160,88 218,176 188,176"/>
+</svg>
